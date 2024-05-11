@@ -1,0 +1,116 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+:root {
+  --color-1: #7c7c7c2b;
+  --color-2: #fff;
+  --color-3: #000000d0;
+  --color-4: #222;
+  --color-5: #7c7c7c6b;
+}
+.btn {
+  border: 1px solid #000000;
+}
+.pad {
+  padding-top: 0.05rem;
+  padding-bottom: 0.05rem;
+}
+.white {
+  color: #fff;
+  background-color: #000000;
+}
+.black {
+  color: #000000;
+}
+.Gameplaybackground {
+  width: 900px;
+  height: 500px;
+  border: 1px solid #fff;
+  background-color: rgba(0, 0, 0, 0.5);
+  background: linear-gradient(
+    135deg,
+    rgba(255, 255, 255, 0.1),
+    rgba(255, 255, 255, 0)
+  );
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border-radius: 20px;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+  z-index: 1;
+  padding: 0;
+  margin: 0;
+}
+.Gamepage {
+  top: -100px;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.Mainpage {
+  top: -50px;
+  left: -30%;
+  transform: translate(-50%, -50%);
+}
+.alert {
+  background-color: var(--color-3);
+  padding: 10px 40px;
+  min-width: 420px;
+  position: absolute;
+  right: 0;
+  border-radius: 5px;
+  overflow: hidden;
+  color: var(--color-2);
+  opacity: 0;
+}
+.ex {
+  color: var(--color-2);
+  font-size: 30px;
+  position: absolute;
+  left: 20px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+.write {
+  padding: 0 20px;
+  font-size: 18px;
+  color: var(--color-2);
+}
+.close-btn {
+  position: absolute;
+  right: 0px;
+  top: 50%;
+  transform: translateY(-50%);
+  background: var(--color-2);
+  padding: 20px 18px;
+  color: var(--color-3);
+  font-size: 22px;
+  line-height: 40px;
+}
+.close-btn:hover {
+  cursor: pointer;
+  background: var(--color-3);
+  color: var(--color-2);
+}
+.scale {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  border: 1px solid var(--color-3);
+  background-color: var(--color-3);
+  width: auto;
+  min-width: 30px;
+  padding: 20px 10px;
+  position: absolute;
+  right: 0;
+  overflow: hidden;
+  height: 15px;
+  border-top-left-radius: 15px;
+  border-bottom-left-radius: 15px;
+  transition: transform 0.3s ease;
+}
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
