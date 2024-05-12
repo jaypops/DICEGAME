@@ -9,7 +9,7 @@ const LaptopOnlyPage = () => {
       );
 
     if (isMobile) {
-      window.location.href = "/mobile-only-page";
+      window.location.href = "https://phone-livid.vercel.app/";
     }
   }, []);
   return <div></div>;
