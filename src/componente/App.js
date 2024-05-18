@@ -24,6 +24,8 @@ export default function App() {
   const [GameStarted, setGameStarted] = useState(false);
   const [GameEnded, setGameEnded] = useState(false);
   const [error, seterror] = useState("");
+  const [possibleNumbers, setPossibleNumbers] = useState([]);
+  const [diceRolled, setdiceRolled] = useState(false);
   function handleshowGame() {
     setshowGame((show) => !show);
     setRemoveMainPage((remove) => !remove);
@@ -37,7 +39,20 @@ export default function App() {
     setnumber();
     setcurrenDice(1);
     setcount(0);
+    setdiceRolled(false);
+    setPossibleNumbers([]);
   }
+  const CreateRandomNumber = (min, max) => {
+    return Math.floor(Math.random() * (max - min + 1)) + min;
+  };
+  function handleGeneratedPossibleNumber() {
+    const possible = [];
+    for (let i = 0; i < 3; i++) {
+      possible.push(CreateRandomNumber(1, 6));
+    }
+    setPossibleNumbers(possible);
+  }
+
   return (
     <>
       <LaptopOnlyPage />
@@ -89,6 +104,9 @@ export default function App() {
                 onDone={Done}
                 onerror={error}
                 onseterror={seterror}
+                diceRolled={diceRolled}
+                setdiceRolled={setdiceRolled}
+                onhandleGeneratedPossibleNumber={handleGeneratedPossibleNumber}
               />
             </div>
           </div>
@@ -100,6 +118,10 @@ export default function App() {
               oncount={count}
               onsetcount={setcount}
               onsetnumber={setnumber}
+              onpossibleNumbers={possibleNumbers}
+              onCreateRandomNumber={CreateRandomNumber}
+              setdiceRolled={setdiceRolled}
+              onhandleGeneratedPossibleNumber={handleGeneratedPossibleNumber}
             />
           </div>
           {GameLossorWin && (

@@ -1,4 +1,4 @@
-// import React, { useState } from "react";
+import React, { useState } from "react";
 import dice1 from "../images/dice_1.png";
 import dice2 from "../images/dice_2.png";
 import dice3 from "../images/dice_3.png";
@@ -14,25 +14,23 @@ export default function RollDice({
   oncount,
   onsetcount,
   onsetnumber,
+  onpossibleNumbers,
+  setdiceRolled,
 }) {
-  // const [trap, settrap] = useState(false);
-
-  const CreateRandomNumber = (min, max) => {
-    return Math.floor(Math.random() * (max - min + 1)) + min;
-  };
+  const [trap, setTrap] = useState(false);
 
   const rollDice = () => {
     if (!onnumber || oncount === 0) return;
-    if (oncount === 0) return;
     onsetnumber();
-    const randomNumber = CreateRandomNumber(1, 6);
+    const randomNumber =
+      onpossibleNumbers[Math.floor(Math.random() * onpossibleNumbers.length)];
     onsetcurrentDice(randomNumber);
-
     if (onnumber === randomNumber.toString()) {
       onsetcount(oncount + 2);
     } else {
       onsetcount(oncount - 2);
     }
+    setdiceRolled(false);
     new Audio(sound).play();
   };
 
@@ -55,9 +53,10 @@ export default function RollDice({
     }
   };
 
-  // function handleStrap() {
-  //   settrap((show) => !show);
-  // }
+  function handleStrap() {
+    setTrap((show) => !show);
+  }
+
   return (
     <div className="flex flex-col justify-center items-center w-full h-full">
       <div
@@ -72,15 +71,16 @@ export default function RollDice({
         />
       </div>
       <h3 className="mt-2 font-bold text-sm">Click the dice to roll</h3>
-      {/* <div className="flex justify-between items-center">
+      <div className="flex justify-between items-center">
         {trap && (
           <span>
-            <p className="text-sm pe-2">
-              {onnumber === oncurrentDice
-                ? "Correct"
-                : onnumber < oncurrentDice
-                ? "Too Low"
-                : "Too High"}
+            <p>
+              {onpossibleNumbers.map((number, index) => (
+                <span key={index} className="text-sm pe-2 font-bold">
+                  {index > 0 && ", "}
+                  {number}
+                </span>
+              ))}
             </p>
           </span>
         )}
@@ -89,7 +89,7 @@ export default function RollDice({
             <h2 className="text-sm">{trap ? "Hide" : "Hint"}</h2>
           </button>
         </span>
-      </div> */}
+      </div>
     </div>
   );
 }

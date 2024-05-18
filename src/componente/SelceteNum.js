@@ -6,13 +6,21 @@ export default function SelecteNum({
   onsetnumber,
   onDone,
   onseterror,
+  onhandleGeneratedPossibleNumber,
+  diceRolled,
+  setdiceRolled,
 }) {
   function handleClick(num) {
+    if (!diceRolled) {
+      onhandleGeneratedPossibleNumber();
+      setdiceRolled(true);
+    }
     onsetnumber(num);
     if (onDone === true) {
       onsetnumber(null);
-      onseterror("increse chance");
+      onseterror("increase chance");
     }
+    // onhandleGeneratedPossibleNumber();
     new Audio(sound).play();
   }
   return (
