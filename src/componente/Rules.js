@@ -33,10 +33,10 @@ export default function Rules({ onhandleshowGame, onhandlerule }) {
             Scoring System: +2 points for a correct guess, -2 points for an
             incorrect guess.
           </li>
-          {/* <li className="leading-loose font-medium ">
-            Hint Feature: Use hints to determine if your chosen number is too
-            low or too high.
-          </li> */}
+          <li className="leading-loose font-medium ">
+            Hint Feature: Three numbers will be provided, one of which will be
+            correct.
+          </li>
           <li className="leading-loose font-medium ">
             Winning and Losing: Win by reaching 20 points, lose if your score
             reaches 0.

@@ -52,11 +52,9 @@ export default function RollDice({
         return null;
     }
   };
-
   function handleStrap() {
     setTrap((show) => !show);
   }
-
   return (
     <div className="flex flex-col justify-center items-center w-full h-full">
       <div
