@@ -1,4 +1,5 @@
 import "../styles/index.css";
+import "../styles/md.css";
 import MainPageDice from "./MainPageDice";
 import PlayGame from "./PlayGame";
 import Score from "./Score";
@@ -10,7 +11,7 @@ import Back from "./Back";
 import Error from "./Errors";
 // import ErrorBoundary from "./ErrorBoundary";
 import LossorWinRate from "./LossandWinRate";
-import LaptopOnlyPage from "./LaptopOnlyPage";
+// import LaptopOnlyPage from "./LaptopOnlyPage";
 import { useState } from "react";
 export default function App() {
   const [showGame, setshowGame] = useState(false);
@@ -55,10 +56,10 @@ export default function App() {
 
   return (
     <>
-      <LaptopOnlyPage />
+      {/* <LaptopOnlyPage /> */}
       {RemoveMainPage && (
         <div>
-          <div className="flex items-center justify-between">
+          <div className="flex items-center justify-between playgame_body ">
             <div>
               <MainPageDice />
             </div>

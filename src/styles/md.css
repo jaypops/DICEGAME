@@ -1,0 +1,50 @@
+@media (min-width: 360px) and (max-width: 750px) {
+  .mainpagedice_size {
+    width: 400px;
+    height: 350px;
+    padding: 4px;
+  }
+  .playgame_body {
+    display: block;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+  }
+  .playgame_text {
+    font-size: 30px;
+    display: block;
+    padding: 3px;
+  }
+  .playgame_btn {
+    padding: 4px 12px 4px 12px;
+    border-radius: 25px;
+  }
+  .playgame_btn_text {
+    font-size: 8px;
+  }
+  .playgame_btn_side {
+    display: flex;
+    justify-content: start;
+    padding: 0 0 0 6px;
+  }
+  .Gameplaybackground {
+    max-width: 350px;
+    min-height: 400px;
+    align-items: center;
+  }
+  .Mainpage {
+    top: -100px;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 5px;
+  }
+  .rules_text{
+    font-size: 11px;
+  }
+  .rules_text_heading{
+    font-size: 20px;
+  }
+  .rules_toggle{
+    font-size: 20px;
+  }
+}

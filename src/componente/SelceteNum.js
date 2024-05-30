@@ -14,11 +14,11 @@ export default function SelecteNum({
     if (!diceRolled) {
       onhandleGeneratedPossibleNumber();
       setdiceRolled(true);
+      onseterror("You have not selected a number")
     }
     onsetnumber(num);
     if (onDone === true) {
       onsetnumber(null);
-      onseterror("increase chance");
     }
     // onhandleGeneratedPossibleNumber();
     new Audio(sound).play();
