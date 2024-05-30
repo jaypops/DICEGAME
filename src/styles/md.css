@@ -1,7 +1,7 @@
 @media (min-width: 360px) and (max-width: 750px) {
   .mainpagedice_size {
-    width: 400px;
-    height: 350px;
+    width: 450px;
+    height: 400px;
     padding: 4px;
   }
   .playgame_body {
@@ -9,18 +9,19 @@
     flex-direction: row;
     justify-content: center;
     align-items: center;
+    padding-top: 100px;
   }
   .playgame_text {
-    font-size: 30px;
+    font-size: 50px;
     display: block;
     padding: 3px;
   }
   .playgame_btn {
-    padding: 4px 12px 4px 12px;
+    padding: 6px 15px 6px 15px;
     border-radius: 25px;
   }
   .playgame_btn_text {
-    font-size: 8px;
+    font-size: 11px;
   }
   .playgame_btn_side {
     display: flex;
