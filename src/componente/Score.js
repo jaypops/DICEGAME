@@ -1,5 +1,6 @@
 import { useEffect } from "react";
 import "../styles/index.css";
+import "../styles/md.css";
 
 export default function Score({
   oncount,
@@ -43,10 +44,10 @@ export default function Score({
   }
   return (
     <>
-      <div className="flex justify-center items-center">
+      <div className="flex justify-center items-center score_num">
         {onDone && (
           <button
-            className="text-xl mr-4 mt-7 w-1/6 text-center border border-bg-white px-1.5 pad bg-black text-white rounded-md"
+            className="text-xl mr-4 mt-7 w-1/6 text-center border border-bg-white px-1.5 pad bg-black text-white rounded-md score_text"
             onClick={handleDecrease}
           >
             -
@@ -59,7 +60,7 @@ export default function Score({
         </span>
         {onDone && (
           <button
-            className="text-xl ml-4 mt-7 w-1/6 text-center border border-bg-white px-1 pad bg-black text-white rounded-md"
+            className="text-xl ml-4 mt-7 w-1/6 text-center border border-bg-white px-1 pad bg-black text-white rounded-md score_text"
             onClick={handleIncrease}
           >
             +
@@ -68,7 +69,7 @@ export default function Score({
         {onDone && (
           <span className="pl-3 pt-7">
             <button
-              className="font-medium text-center border border-bg-white bg-black text-white rounded-md text-sm px-2 py-1.5"
+              className="font-medium text-center border border-bg-white bg-black text-white rounded-md text-sm px-2 py-1.5 score_text score_done"
               onClick={handleDone}
             >
               Done

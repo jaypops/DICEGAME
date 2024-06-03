@@ -1,8 +1,10 @@
 import "../styles/index.css";
+import "../styles/md.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faXmark } from "@fortawesome/free-solid-svg-icons";
 import { faChartSimple } from "@fortawesome/free-solid-svg-icons";
 import { useEffect, useState } from "react";
+
 export default function LossorWinRate({ oncount, onDone }) {
   const [Wingame, setWingame] = useState(0);
   const [Lossgame, setLossgame] = useState(0);
@@ -40,7 +42,10 @@ export default function LossorWinRate({ oncount, onDone }) {
     });
   }
   return (
-    <div className="scale" style={{ maxWidth: bodyWidth + "px" }}>
+    <div
+      className="scale"
+      style={{ maxWidth: bodyWidth + "px" }}
+    >
       <div className="inline-block">
         <FontAwesomeIcon
           icon={Hovered ? faChartSimple : faXmark}

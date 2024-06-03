@@ -6,6 +6,7 @@ import dice4 from "../images/dice_4.png";
 import dice5 from "../images/dice_5.png";
 import dice6 from "../images/dice_6.png";
 import sound from "../sound/MOREDICE.WAV";
+import "../styles/md.css";
 
 export default function RollDice({
   oncurrentDice,
@@ -63,7 +64,7 @@ export default function RollDice({
         disabled={!onnumber || oncount === 0}
       >
         <img
-          className="w-36 h-36 mt-20"
+          className="w-36 h-36 mt-20 rolldice_size"
           src={getDiceNumber(oncurrentDice)}
           alt="Dice"
         />
@@ -82,7 +83,7 @@ export default function RollDice({
             </p>
           </span>
         )}
-        <span className="bg-black text-white rounded-lg px-6 py-0.5">
+        <span className="bg-black text-white rounded-lg px-6 py-0.5 rolldice_btn">
           <button onClick={handleStrap}>
             <h2 className="text-sm">{trap ? "Hide" : "Hint"}</h2>
           </button>

@@ -84,7 +84,7 @@ export default function App() {
       )}
       {showGame && (
         <div className="mt-10 relative">
-          <div className="flex justify-between items-center px-12">
+          <div className="flex justify-between items-center px-12 playgame2_body">
             <div>
               <Score
                 oncount={count}
